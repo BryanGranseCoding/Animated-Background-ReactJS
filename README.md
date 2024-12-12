@@ -170,10 +170,11 @@ This guide will walk you through setting up a new React TypeScript project using
 
 1. [Create a New Vite Project](#1-create-a-new-vite-project)
 2. [Install Dependencies](#2-install-dependencies)
-3. [Create the AnimatedBackground Component](#3-create-the-animatedbackground-component)
-4. [Create the Hero Section](#4-create-the-hero-section)
-5. [Update the App Component](#5-update-the-app-component)
-6. [Run the Development Server](#6-run-the-development-server)
+3. [Set up Tailwind CSS](#3-set-up-tailwind-css)
+4. [Create the AnimatedBackground Component](#4-create-the-animatedbackground-component)
+5. [Create the Hero Section](#5-create-the-hero-section)
+6. [Update the App Component](#6-update-the-app-component)
+7. [Run the Development Server](#7-run-the-development-server)
 
 ## 1. Create a New Vite Project
 
@@ -188,11 +189,59 @@ cd my-animated-project
 
 Install the necessary dependencies:
 
-```
+```bash
 npm install
 ```
 
-## 3. Create the AnimatedBackground Component
+## 3. Set up Tailwind CSS
+
+Install Tailwind CSS and its peer dependencies:
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Update the `tailwind.config.js` file:
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Create a new file `src/index.css` and add the Tailwind directives:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+Update `src/main.tsx` to import the new CSS file:
+
+```tsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
+import './index.css'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
+```
+
+## 4. Create the AnimatedBackground Component
 
 Create a new file \`src/components/AnimatedBackground.tsx\`:
 
@@ -265,7 +314,7 @@ Create a new file \`src/styles/AnimatedBackground.css\`:
 }
 ```
 
-## 4. Create the Hero Section
+## 5. Create the Hero Section
 
 Create a new file \`src/components/HeroSection.tsx\`:
 
@@ -286,7 +335,7 @@ export const HeroSection: React.FC = () => {
 };
 ```
 
-## 5. Update the App Component
+## 6. Update the App Component
 
 Replace the contents of \`src/App.tsx\` with:
 
@@ -305,7 +354,7 @@ function App() {
 export default App;
 ```
 
-## 6. Run the Development Server
+## 7. Run the Development Server
 
 Start the development server:
 
@@ -318,7 +367,7 @@ Visit the URL provided in the terminal (usually \`http://localhost:5173\`) to se
 ---
 
 Congratulations! You've successfully set up a new React TypeScript project with Vite and implemented the AnimatedBackground component in a hero section. Feel free to customize the component and hero section to fit your project's needs.
-```
+\`\`\`
 
 
 
