@@ -24,24 +24,24 @@ To use the AnimatedBackground component in your project, follow these steps:
 
 1. Import the AnimatedBackground component in your desired file:
 
-\`\`\`tsx
+```tsx
 import { AnimatedBackground } from './components/AnimatedBackground';
-\`\`\`
+```
 
 2. Use the component in your JSX:
 
-\`\`\`tsx
+```tsx
 <section className="relative min-h-screen flex items-center justify-center">
   <AnimatedBackground />
   {/* Your content goes here */}
 </section>
-\`\`\`
+```
 
 ### Example: Hero Section
 
 Here's an example of how to use the AnimatedBackground in a hero section:
 
-\`\`\`tsx
+```tsx
 import React from 'react';
 import { AnimatedBackground } from './AnimatedBackground';
 
@@ -56,13 +56,13 @@ export const HeroSection: React.FC = () => {
     </section>
   );
 };
-\`\`\`
+```
 
 ## Component Code
 
 Here's the full code for the \`AnimatedBackground.tsx\` component:
 
-\`\`\`tsx
+```tsx
 import React from 'react';
 import '../styles/AnimatedBackground.css';
 
@@ -99,13 +99,13 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
     </div>
   );
 };
-\`\`\`
+```
 
 ## CSS Code
 
 Here's the full CSS code for the \`AnimatedBackground.css\` file:
 
-\`\`\`css
+```css
 @keyframes move {
   0% {
     transform: translateX(0) translateY(0);
@@ -131,7 +131,7 @@ Here's the full CSS code for the \`AnimatedBackground.css\` file:
   inset: 0;
   background-size: 4rem 4rem;
 }
-\`\`\`
+```
 
 ## Customization
 
@@ -144,14 +144,14 @@ The AnimatedBackground component accepts several props for customization:
 
 Example of a customized usage:
 
-\`\`\`tsx
+```tsx
 <AnimatedBackground 
   overlayColor="#f0f0f0" 
   overlayOpacity={0.8} 
   gridColor="#e0e0e0" 
   animationDuration={20} 
 />
-\`\`\`
+```
 
 Feel free to adjust these props to match your design requirements.
 
