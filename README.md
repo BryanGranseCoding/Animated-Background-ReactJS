@@ -199,7 +199,8 @@ Install Tailwind CSS and its peer dependencies:
 
 ```bash
 npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+or npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+or npx tailwindcss init -p
 ```
 
 Update the `tailwind.config.js` file:
