@@ -156,7 +156,7 @@ Feel free to adjust these props to match your design requirements.
 ---
 
 This animated background component provides a flexible and reusable solution for adding dynamic visual interest to your React TypeScript project. By following this documentation, you can easily integrate and customize the component to suit your needs.
-```
+
 
 ---
 ---
