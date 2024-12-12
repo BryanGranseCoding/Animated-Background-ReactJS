@@ -179,24 +179,24 @@ This guide will walk you through setting up a new React TypeScript project using
 
 Open your terminal and run the following commands:
 
-\`\`\`bash
+```bash
 npm create vite@latest my-animated-project -- --template react-ts
 cd my-animated-project
-\`\`\`
+```
 
 ## 2. Install Dependencies
 
 Install the necessary dependencies:
 
-\`\`\`bash
+```
 npm install
-\`\`\`
+```
 
 ## 3. Create the AnimatedBackground Component
 
 Create a new file \`src/components/AnimatedBackground.tsx\`:
 
-\`\`\`tsx
+```tsx
 import React from 'react';
 import '../styles/AnimatedBackground.css';
 
@@ -233,11 +233,11 @@ export const AnimatedBackground: React.FC<AnimatedBackgroundProps> = ({
     </div>
   );
 };
-\`\`\`
+```
 
 Create a new file \`src/styles/AnimatedBackground.css\`:
 
-\`\`\`css
+```css
 @keyframes move {
   0% {
     transform: translateX(0) translateY(0);
@@ -263,13 +263,13 @@ Create a new file \`src/styles/AnimatedBackground.css\`:
   inset: 0;
   background-size: 4rem 4rem;
 }
-\`\`\`
+```
 
 ## 4. Create the Hero Section
 
 Create a new file \`src/components/HeroSection.tsx\`:
 
-\`\`\`tsx
+```tsx
 import React from 'react';
 import { AnimatedBackground } from './AnimatedBackground';
 
@@ -284,13 +284,13 @@ export const HeroSection: React.FC = () => {
     </section>
   );
 };
-\`\`\`
+```
 
 ## 5. Update the App Component
 
 Replace the contents of \`src/App.tsx\` with:
 
-\`\`\`tsx
+```tsx
 import React from 'react';
 import { HeroSection } from './components/HeroSection';
 
@@ -303,22 +303,22 @@ function App() {
 }
 
 export default App;
-\`\`\`
+```
 
 ## 6. Run the Development Server
 
 Start the development server:
 
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+```
 
 Visit the URL provided in the terminal (usually \`http://localhost:5173\`) to see your new React TypeScript project with the animated background in the hero section.
 
 ---
 
 Congratulations! You've successfully set up a new React TypeScript project with Vite and implemented the AnimatedBackground component in a hero section. Feel free to customize the component and hero section to fit your project's needs.
-\`\`\`
+```
 
 
 
