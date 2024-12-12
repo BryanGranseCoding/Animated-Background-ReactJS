@@ -1,0 +1,25 @@
+@keyframes move {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+      transform: translateX(-4rem) translateY(-4rem);
+    }
+  }
+  
+  .animated-background {
+    position: absolute;
+    inset: 0;
+    z-index: -10;
+  }
+  
+  .animated-background__overlay {
+    position: absolute;
+    inset: 0;
+  }
+  
+  .animated-background__grid {
+    position: absolute;
+    inset: 0;
+    background-size: 4rem 4rem;
+  }
